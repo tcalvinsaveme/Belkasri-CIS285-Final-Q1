@@ -5,7 +5,7 @@ public class SelectionSort {
 
     /* Selection Sort function */
 
-public static void sort( int arr[] ){
+public static int[] sort( int arr[] ){
 
    int N = arr.length;
 
@@ -15,9 +15,9 @@ public static void sort( int arr[] ){
 
    {
 
-       pos = j;
+       pos = i;
 
-       for (j = i+1; j < N-1; j++)
+       for (j = i+1; j < N; j++)
 
        {
 
@@ -25,7 +25,7 @@ public static void sort( int arr[] ){
 
            {
 
-               pos = i;
+               pos = j;
 
            }
 
@@ -33,7 +33,7 @@ public static void sort( int arr[] ){
 
        /* Swap arr[i] and arr[pos] */
 
-       temp = arr[I];
+       temp = arr[i];
 
        arr[i] = arr[pos];
 
@@ -41,6 +41,7 @@ public static void sort( int arr[] ){
 
    }       
 
+   return arr;
  }
 
 }
